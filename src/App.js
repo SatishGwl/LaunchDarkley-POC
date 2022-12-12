@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useFlags, withLDProvider } from 'launchdarkly-react-client-sdk';
+import HelloWord from './HelloWord'; //We will add this code in the next step
 
 function App() {
+  const userDomain = userEmail.split('@').pop(),  
+  const value = configCatClient.getValue(key, defaultValue, callback, userObject);
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <HelloWord />
+       {/**/}
       </header>
     </div>
   );
 }
+// Update the export default to use your environment-specific client ID and a sample user:
+export default withLDProvider({
+  const value = configCatClient.getValue(key, defaultValue, callback, countryObject);
 
-export default App;
+  clientSideID: '6391d3615a5f060df9a4a991',
+  countryObject:{
+    country: 'india'
+  },
+  user: {
+      "key": "example_user",
+      "name": "Example user",
+      "email": "User@example.com",
+      custom: {country: countryObject},
+      email: userEmail,
+      country: country,
+
+     }
+})(App)
